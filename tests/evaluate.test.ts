@@ -16,6 +16,10 @@ test('Evaluate the Resolvers', async () => {
 
   const response = await client.send(command);
 
+  // Error would be NOT thrown
+  response.error != null && console.error(response.error);
+  expect(response.error == null).toBe(true);
+
   const result = JSON.parse(response.evaluationResult);
   expect(result.attributeValues.description.S).toEqual(
     `${contextJson.arguments.title} for ${contextJson.arguments.department} department with status ${contextJson.arguments.taskStatus}`,
