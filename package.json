@@ -5,5 +5,14 @@
   "repository": "git@github.com:gili-Katagiri/appsync-vtl-unit-testing.git",
   "author": "gili-Katagiri <65004703+gili-Katagiri@users.noreply.github.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.7.4"
+  }
 }
