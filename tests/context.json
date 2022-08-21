@@ -1,0 +1,10 @@
+{
+  "arguments": {
+    "owner": "janed",
+    "title": "Important Task",
+    "taskStatus": "in Progress",
+    "priority": "high",
+    "department": "Engineering",
+    "classification": 2
+  }
+}
