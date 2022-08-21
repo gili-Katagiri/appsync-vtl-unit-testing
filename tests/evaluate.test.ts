@@ -20,6 +20,9 @@ test('Evaluate the Resolvers', async () => {
   response.error != null && console.error(response.error);
   expect(response.error == null).toBe(true);
 
+  // Detect remaining "references": `$util` | `$context` | ...
+  expect(response.evaluationResult).not.toMatch(/\$util|\$context/);
+
   const result = JSON.parse(response.evaluationResult);
   expect(result.attributeValues.description.S).toEqual(
     `${contextJson.arguments.title} for ${contextJson.arguments.department} department with status ${contextJson.arguments.taskStatus}`,
